@@ -1,0 +1,18 @@
+{
+    "name": "mahmudul/expense_tracker",
+    "description": "A PHP application for tracking expenses.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "MahmudulHassan5809",
+            "email": "mahmudul.hassan240@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src/Framework",
+            "App\\": "src/App"
+        }
+    }
+}
