@@ -16,7 +16,7 @@ class App {
     }
 
     public function add(string $path){
-        $this->router->add($path);
+        $this->router->add('GET', $path);
     }
 }
 
