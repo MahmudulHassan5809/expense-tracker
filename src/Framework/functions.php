@@ -8,5 +8,3 @@ function dd(mixed $value){
     echo "<pre>";
     die();
 }
-
-?>

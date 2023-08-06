@@ -22,5 +22,3 @@ class App {
         $this->router->add('GET', $path, $controller);
     }
 }
-
-?>
