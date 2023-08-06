@@ -1,4 +1,4 @@
-<?php include ""; ?>
+<?php include $this->resolve("partials/_header.php") ;?>
 
 
 
@@ -262,11 +262,4 @@
 </section>
 <!-- End Main Content Area -->
 
-<!-- Footer -->
-<footer class="container mx-auto my-12 text-center">
-    &copy; PHPiggy
-</footer>
-<!-- End Footer -->
-</body>
-
-</html>
+<?php include $this->resolve("partials/_footer.php") ;?>
