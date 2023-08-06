@@ -26,6 +26,13 @@ class Router {
     public function dispatch(string $path, string $method){
         $path = $this->normalizePath($path);
         $method = strtoupper($method);
+
+        foreach ($this->routes as $route) {
+            if(!preg_match("#^{$route['path']}$#", $path) || $route['method'] !== $method){
+                continue;
+            }
+            echo "route found";
+        }
     }
 }
 
