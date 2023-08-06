@@ -31,7 +31,10 @@ class Router {
             if(!preg_match("#^{$route['path']}$#", $path) || $route['method'] !== $method){
                 continue;
             }
-            echo "route found";
+            [$class, $function] = $route['controller'];
+            $controllerInstance = new $class;
+            $controllerInstance->{$function}();
+
         }
     }
 }
