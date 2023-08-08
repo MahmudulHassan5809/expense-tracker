@@ -30,7 +30,6 @@ class Container {
         if (count($params) === 0) {
             return new $className;
         }
-
         $dependencies = [];
         foreach ($params as $param) {
             $name  = $param->getName();
@@ -44,8 +43,8 @@ class Container {
             }
 
             $dependencies[] = $this->get($type->getName());
-            return $reflectionClass->newInstanceArgs($dependencies);
         }
+        return $reflectionClass->newInstanceArgs($dependencies);
     }
 
     public function get(string $id) {
@@ -53,7 +52,7 @@ class Container {
             throw new ContainerException("Class {$id} does not exists in container");
         }
 
-        if(array_key_exists($id, $this->resolved)){
+        if (array_key_exists($id, $this->resolved)) {
             return $this->resolved[$id];
         }
 
