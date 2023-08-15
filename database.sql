@@ -8,3 +8,14 @@ CREATE TABLE IF NOT EXISTS users(
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS transactions(
+  id bigserial PRIMARY KEY,
+  description varchar(255) NOT NULL,
+  amount numeric(10,2) NOT NULL,
+  date timestamp NOT NULL,
+  created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  user_id bigint NOT NULL,
+  FOREIGN KEY(user_id) REFERENCES users(id)
+);

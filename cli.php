@@ -1,4 +1,5 @@
 <?php
+
 require __DIR__ . "/vendor/autoload.php";
 
 use Framework\Database;
@@ -16,4 +17,4 @@ $db = new Database($_ENV['DB_DRIVER'], [
 
 $sqlFile = file_get_contents("./database.sql");
 
-$db->connection->query($sqlFile);
+$db->query($sqlFile);
